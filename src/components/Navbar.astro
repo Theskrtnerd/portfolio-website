@@ -1,0 +1,11 @@
+---
+import Link from "./Link.astro";
+const {pageTitle} = Astro.props;
+---
+
+<div class="flex justify-between w-full py-8">
+  <Link title="Home" href="/" bool={pageTitle == "Home"}/>
+  <Link title="About" href="/about" bool={pageTitle == "About"}/>
+  <Link title="Projects" href="/projects" bool={pageTitle == "Projects"}/>
+  <Link title="Blog" href="/blog" bool={pageTitle == "Blog"}/>
+</div>
