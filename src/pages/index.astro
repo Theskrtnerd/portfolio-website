@@ -6,4 +6,11 @@ const pageTitle="Home";
 
 <Layout title={pageTitle} class="h-screen">
   <Navbar pageTitle={pageTitle}/>
+  <div class="h-96 w-full flex flex-col justify-center gap-12">
+    <div class="md:flex text-gray-50 font-bold text-4xl">Hi, my name is <nav class="md:pl-2 text-acc-600">Bach Tran</nav></div>
+    <div class="md:flex text-gray-100 text-3xl">I'm a <nav class="md:pl-2 text-acc-600" id="element"></div>
+  </div>
+  <script>
+    import "../scripts/script.js"
+  </script>
 </Layout>
