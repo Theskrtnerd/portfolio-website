@@ -12,11 +12,19 @@ module.exports = {
 				'home': "url('/src/images/homeBackground.svg')"
 			},
 			colors: {
-				'text': '#f8fafc',
-				'background': '#131526',
-				'primary': '#74f8ff',
-				'secondary': '#ebf1ff',
-				'accent': '#0e82f6',
+				'accent': {
+					'50': '#e9f4ff',
+					'100': '#d7ecff',
+					'200': '#b6d9ff',
+					'300': '#8bbfff',
+					'400': '#5d95ff',
+					'500': '#386cff',
+					'600': '#163fff',
+					'700': '#0c33f6',
+					'800': '#0e31d4',
+					'900': '#15309a',
+					'950': '#0c1a5a',
+				},
 			}
 		},
 	},
