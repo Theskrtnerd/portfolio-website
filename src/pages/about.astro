@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title: string="Hello";
+---
+
+<Layout title={title}>
+  <div class="flex gap-8 pt-12 justify-end w-full pb-2">
+    <a href="/" class=`text-text ${title === "Hello" ? "bg-red-800":"bg-blue-800"} text-2xl font-normal` transition:name="home">Home</a>
+    <a href="/projects" class="text-text text-2xl font-normal" transition:name="projects">Projects</a>
+    <a href="/blog" class="text-text text-2xl font-normal" transition:name="blog">Blog</a>
+  </div>
+  <a href="/about"class="text-text text-4xl font-semibold" transition:name="about">About</a>
+</Layout>
