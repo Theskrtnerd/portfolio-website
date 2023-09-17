@@ -6,38 +6,14 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-        'sans': ['Poppins', 'sans-serif' ,defaultTheme.fontFamily.sans],
+				'sans': ['Inter var', defaultTheme.fontFamily.sans],
       },
 			backgroundImage: {
 				'home': "url('/src/images/homeBackground.svg')"
 			},
 			colors: {
-				'acc': {
-					'50': '#eef2ff',
-					'100': '#e0e7ff',
-					'200': '#c7d2fe',
-					'300': '#a5b3fc',
-					'400': '#818bf8',
-					'500': '#6466f1',
-					'600': '#5046e5',
-					'700': '#4438ca',
-					'800': '#3830a3',
-					'900': '#322e81',
-					'950': '#1e1b4b',
-				},			
-				'reg': {
-					'50': '#f6f6f6',
-					'100': '#e7e7e7',
-					'200': '#d1d1d1',
-					'300': '#b0b0b0',
-					'400': '#888888',
-					'500': '#6d6d6d',
-					'600': '#5d5d5d',
-					'700': '#4f4f4f',
-					'800': '#454545',
-					'900': '#3d3d3d',
-					'950': '#171717',
-				},			
+				'acc' : { 200: '#b8c5ff', 600: '#4d48f8', 900: '#232670', 950: '#191e4b' },
+				'gra' : { 100: '#f6f5fb', 200: '#eeecf8', 300: '#c2c0ce', 400: '#8b88a2', 500: '#58546c', 700: '#38354b', 800: '#272338', 900: '#181720' },
 			}
 		},
 	},

@@ -10,9 +10,20 @@ const {title} = Astro.props;
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <style>
+    mjx-container svg {
+    display: inline;
+    }
+
+    .MathJax {
+        font-size: 1.1rem;
+        color: black;
+    }
+  </style>
   <ViewTransitions/>
 </head>
-<body class="bg-reg-950 px-8 md:px-48">
+<body class="font-sans bg-gra-900 px-8 md:px-48">
   <slot/>
 </body>
 </html>
