@@ -1,13 +1,13 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-const {title} = Astro.props;
-import Navbar from "../components/Navbar.astro";
+const {pageTitle} = Astro.props;
+import Navbar from '../components/Navbar.astro';
 ---
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{title}</title>
+  <title>{pageTitle}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="public/icon.ico">
@@ -24,7 +24,8 @@ import Navbar from "../components/Navbar.astro";
   </style>
   <ViewTransitions/>
 </head>
-<body class="font-sans bg-background-950 px-8 md:px-48">
+<body class="font-sans bg-background-950">
+  <Navbar pageTitle={pageTitle}/>
   <slot/>
 </body>
 </html>

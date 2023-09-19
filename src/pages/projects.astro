@@ -1,12 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import TheExperience from "../components/TheExperience.vue";
 const pageTitle="Projects";
 ---
 
-<Layout title={pageTitle}>
-  <Navbar pageTitle={pageTitle}/>
+<Layout pageTitle={pageTitle}>
   <div id="3d-container" class="w-full h-96"></div>
   <script>
     import "../scripts/3d.js"

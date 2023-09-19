@@ -1,11 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
 const pageTitle="Home";
 ---
 
-<Layout title={pageTitle} class="h-screen">
-  <Navbar pageTitle={pageTitle}/>
+<Layout pageTitle={pageTitle} class="h-screen">
   <div class="h-96 w-full flex flex-col justify-center gap-12">
     <div class="flex">
       <div class="md:flex text-background-100 font-bold text-4xl">Hi, my name is <nav class="md:pl-2 text-acc-600">Bach Tran</nav></div>
