@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from "astro:transitions";
 const {title} = Astro.props;
+import Navbar from "../components/Navbar.astro";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +10,7 @@ const {title} = Astro.props;
   <title>{title}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
+  <link rel="icon" href="public/icon.ico">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <style>
     mjx-container svg {
@@ -23,7 +24,7 @@ const {title} = Astro.props;
   </style>
   <ViewTransitions/>
 </head>
-<body class="font-sans bg-gra-900 px-8 md:px-48">
+<body class="font-sans bg-background-950 px-8 md:px-48">
   <slot/>
 </body>
 </html>
