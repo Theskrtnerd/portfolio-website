@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import {MTLLoader} from 'three/addons/loaders/MTLLoader.js';
 
 function siuu(){
     const scene = new THREE.Scene();
@@ -11,12 +12,12 @@ function siuu(){
     const container = document.getElementById("3d-container");
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
-    // const controls = new OrbitControls(camera, renderer.domElement);
-    // controls.target.set(0, 0.5, 0);
-    // controls.enableDamping = true;
-    // controls.dampingFactor = 0.05;
-    // controls.rotateSpeed = 0.5;
-    // controls.zoomSpeed = 1.2;
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.target.set(0, 0.5, 0);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.05;
+    controls.rotateSpeed = 0.5;
+    controls.zoomSpeed = 1.2;
 
     // Function to update renderer size based on the container 
     function resizeRenderer() {
@@ -45,46 +46,69 @@ function siuu(){
     // Append the renderer's canvas to the "3d-container" div
     container.appendChild(renderer.domElement);
 
-
-    const loader = new OBJLoader();
-
     let objModel;
+    const objLoader = new OBJLoader();
+    const mtlLoader = new MTLLoader();
+    mtlLoader.load('models/project.mtl', (mtl) => {
+        mtl.preload();
+        objLoader.setMaterials(mtl);
+        objLoader.load('models/project.obj', (object) => {
+        object.scale.x = object.scale.y = object.scale.z = 1;
+        object.rotation.x -= 0.5
+        object.rotation.y -= 0.2
+        object.rotation.z -= 0.2
 
-    // load a resource
-    loader.load(
-        // resource URL
-        'models/tdb.obj',
-        // called when resource is loaded
-        function ( object ) {
-            const material = new THREE.MeshStandardMaterial({
-                color: new THREE.Color(0x83DCFF), // Replace with your desired color
-                // Add other material properties as needed
-            });
-            object.traverse((child) => {
-                if (child instanceof THREE.Mesh) {
-                    child.material = material;
-                }
-            });
-            object.scale.x = object.scale.y = object.scale.z = 30;
-            object.rotation.x -= 0.3
-            scene.add(object)
+        scene.add(object)
+        objModel = object;
+        });
+    });
 
-            objModel = object;
 
-        },
-        // called when loading is in progresses
-        function ( xhr ) {
 
-            console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
 
-        },
-        // called when loading has errors
-        function ( error ) {
+    // const objLoader = new OBJLoader();
+    // objLoader.load('models/project.obj', (object) => {
+    //     object.scale.x = object.scale.y = object.scale.z = 1;
+    //     object.rotation.x -= 0.5
+    //     object.rotation.y -= 0.2
+    //     object.rotation.z -= 0.2
+// 
+    //     scene.add(object)
+    //     objModel = object;
+    // });
 
-            console.log( error );
 
-        }
-    );
+
+    // const loader = new OBJLoader();
+    // // load a resource
+    // loader.load(
+    //     // resource URL
+    //     'models/project.obj',
+    //     // called when resource is loaded
+    //     function ( object ) {
+    //         object.scale.x = object.scale.y = object.scale.z = 1;
+    //         object.rotation.x -= 0.5
+    //         object.rotation.y -= 0.2
+    //         object.rotation.z -= 0.2
+// 
+    //         scene.add(object)
+// 
+    //         objModel = object;
+// 
+    //     },
+    //     // called when loading is in progresses
+    //     function ( xhr ) {
+// 
+    //         console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+// 
+    //     },
+    //     // called when loading has errors
+    //     function ( error ) {
+// 
+    //         console.log( error );
+// 
+    //     }
+    // );
     //const loader = new GLTFLoader();
     //
     //loader.load( 'public/tdb.gltf', function ( gltf ) {
@@ -104,7 +128,7 @@ function siuu(){
     directionalLight.position.set( 100, 100, 0 );
     scene.add( directionalLight );
 
-    camera.position.set(2,0.5,2);
+    camera.position.set(0,30,100);
 
 
     function animate() {
