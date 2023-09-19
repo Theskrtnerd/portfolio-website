@@ -12,6 +12,7 @@ import Navbar from '../components/Navbar.astro';
   <meta name="description" content="" />
   <link rel="icon" href="public/icon.ico">
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" type="text/css" href="../styles/styles.css">
   <style>
     mjx-container svg {
     display: inline;
@@ -26,6 +27,9 @@ import Navbar from '../components/Navbar.astro';
 </head>
 <body class="font-sans bg-background-950">
   <Navbar pageTitle={pageTitle}/>
-  <slot/>
+  <div id="hello"></div>
+  <div class="px-8 md:px-48">
+    <slot/>
+  </div>
 </body>
 </html>
