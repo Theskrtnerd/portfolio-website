@@ -12,7 +12,12 @@ module.exports = {
 				'home': "url('/src/images/homeBackground.svg')"
 			},
 			colors: {
-				'accent': {
+				'text': '#FFFFFF',
+				'background': '#111111',
+				'primary': '#83DCFF',
+				'secondary': '#E7E7E7',
+				'accent': '#0075FF',
+				'azure-radiance': {
 					'50': '#edfaff',
 					'100': '#d6f1ff',
 					'200': '#b5e9ff',
@@ -25,7 +30,7 @@ module.exports = {
 					'900': '#0d4e9b',
 					'950': '#0e305d',
 				},
-				'background': {
+				'cod-gray': {
 					'50': '#f6f6f6',
 					'100': '#e7e7e7',
 					'200': '#d1d1d1',
