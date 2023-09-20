@@ -10,8 +10,7 @@ import Navbar from '../components/Navbar.astro';
   <title>{pageTitle}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
-  <link rel="icon" href="public/icon.ico">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="icon" href="icon.ico">
   <!--<link rel="stylesheet" type="text/css" href="../styles/styles.css">-->
   <style>
     mjx-container svg {
@@ -25,10 +24,9 @@ import Navbar from '../components/Navbar.astro';
   </style>
   <ViewTransitions/>
 </head>
-<body class="font-sans bg-background">
+<body class="bg-background">
   <Navbar pageTitle={pageTitle}/>
-  <div id="hello"></div>
-  <div class="px-8 md:px-48">
+  <div class="px-8 md:px-36">
     <slot/>
   </div>
 </body>

@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				'sans': ['Inter var', defaultTheme.fontFamily.sans],
+				'heading': ['InterVariable', 'Inter', defaultTheme.fontFamily.sans],
+				'text': ['Poppins', defaultTheme.fontFamily.sans],
       },
 			backgroundImage: {
 				'home': "url('/src/images/homeBackground.svg')"
