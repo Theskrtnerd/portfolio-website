@@ -4,9 +4,11 @@ function typed() {
   const typed = new Typed('#element', {
     strings: ['a Computer Science student', 'an Aspiring Software Engineer'],
     typeSpeed: 50,
+    backSpeed: 20,
     loop: true,
     loopCount: 3,
     smartBackspace: true,
+    showCursor: false,
   });
 }
 
