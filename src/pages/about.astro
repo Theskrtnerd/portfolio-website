@@ -4,4 +4,24 @@ const pageTitle="About";
 ---
 
 <Layout pageTitle={pageTitle}>
+  <div class=" flex w-full h-[calc(100vh-180px);]">
+    <div class=" w-1/3 h-full flex items-center justify-center">
+      <img src="images/super-ava.jpeg" alt="AR Emoji" class="w-72 h-72 rounded-full"/>
+    </div>
+    <div class=" w-2/3 flex h-full justify-center py-4 px-8 flex-col text-text">
+      <div class="text-4xl font-semibold" data-value="Hello again, I'm Bach Tran" id="scrabble">About me (try to hover me)</div>
+      <div class="text-md pt-8 flex">
+        Currently a first-year student at the University of Adelaide, I'm interested in applying technology, especially AI/ML, to the healthcare industry. Since I was a small child, I have always loved mathematics. I was mesmerized by how a difficult math problem can be solved using a series of simple logic
+      </div>
+      <div class="text-md pt-2">
+        Growing older, I discovered programming, which was a whole new world. From web and mobile development to data science and machine learning, each time I discovered something new, I immediately learned the tool required from YouTube, whether it's Django, Flutter, or most recently, TensorFlow.
+      </div>
+      <div class="text-md pt-2">
+        As both of my parents are medical doctors, I want to delve myself into MedTech and continue my family's tradition of saving people's lives, but with my own knowledge and technology.
+      </div>
+    </div>
+  </div>
+  <script>
+    import '../scripts/scrabble.js'
+  </script>
 </Layout>
