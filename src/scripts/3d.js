@@ -13,10 +13,10 @@ function siuu(){
     const renderer = new THREE.WebGLRenderer({ alpha: true });
 
     const controls = new OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 40, 0);
+    controls.target.set(15, 30, 0);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
-    controls.rotateSpeed = 0.5;
+    controls.rotateSpeed = 0.1;
     controls.zoomSpeed = 1.2;
 
     // Function to update renderer size based on the container 
@@ -53,7 +53,7 @@ function siuu(){
         mtl.preload();
         objLoader.setMaterials(mtl);
         objLoader.load('models/project.obj', (object) => {
-        object.scale.x = object.scale.y = object.scale.z = 1.5;
+        object.scale.x = object.scale.y = object.scale.z = 1.25;
         object.rotation.x -= 0.5
         object.rotation.y -= 0.2
         object.rotation.z -= 0.2
@@ -128,7 +128,7 @@ function siuu(){
     directionalLight.position.set( 100, 100, 0 );
     scene.add( directionalLight );
 
-    camera.position.set(15,45,100);
+    camera.position.set(15,30,100);
 
 
     function animate() {
