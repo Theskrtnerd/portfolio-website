@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OBJLoader } from 'three/addons/loaders/OBJLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
-import {MTLLoader} from 'three/addons/loaders/MTLLoader.js';
+import { MTLLoader } from 'three/addons/loaders/MTLLoader.js';
 
 function siuu(){
     const scene = new THREE.Scene();
@@ -52,8 +52,8 @@ function siuu(){
     mtlLoader.load('models/project.mtl', (mtl) => {
         mtl.preload();
         objLoader.setMaterials(mtl);
-        objLoader.load('models/project.obj', (object) => {
-        object.scale.x = object.scale.y = object.scale.z = 1.25;
+        objLoader.load('models/project_v1.obj', (object) => {
+        object.scale.x = object.scale.y = object.scale.z = 0.125;
         object.rotation.x -= 0.5
         object.rotation.y -= 0.2
         object.rotation.z -= 0.2
