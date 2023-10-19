@@ -1,10 +1,10 @@
 ---
+const {title, description} = Astro.props;
 ---
 
 <div class="card">
   <div class="card-content flex flex-col justify-between p-4">
-    <div class="text-xl font-semibold text-cod-gray-100">Soccer Quiz Discord Bot</div>
-    <div class="text-sm text-cod-gray-300">Build a Discord bot that has soccer quizzes games like: guess the 11, Tic-tac-toe</div>
-    <div>C</div>
+    <div class="text-xl font-semibold text-cod-gray-100">{title}</div>
+    <div class="text-sm text-cod-gray-300">{description}</div>
   </div>
 </div>
